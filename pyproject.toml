@@ -1,0 +1,15 @@
+[project]
+name = "ddpm"
+version = "0.1.0"
+description = "Denoising Diffusion Probabilistic Models"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "tqdm>=4.67.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*.py"]
