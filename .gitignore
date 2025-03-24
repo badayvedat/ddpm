@@ -179,3 +179,4 @@ uv.lock
 # artifacts
 artifacts/
 data
+wandb/

@@ -8,8 +8,29 @@ dependencies = [
     "torch>=2.6.0",
     "torchvision>=0.21.0",
     "tqdm>=4.67.1",
+    "wandb>=0.19.8",
 ]
 
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["*.py"]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[[tool.mypy.overrides]]
+module = "wandb"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "wandb.*"
+ignore_missing_imports = true
